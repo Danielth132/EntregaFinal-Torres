@@ -43,6 +43,6 @@
        * react-toastify 9.1.1
        * sweetalert2 11.7.2
 
-* App en funcionamiento subida a algo :
+* App en funcionamiento:
 
-        http// algo
+        https://entrega-final-torres.vercel.app/
