@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# Documentacion de la App One Appstore
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Introduccion
+* Este proyecto simula una pagina web de ventas online donde se podra ver, filtrar y seleccionar los productos en venta, agregar a un carrito de compra y posteriormente confirmar al compra.
 
-In the project directory, you can run:
+    El proyecto es una app desarollada en React.js, libreria para contruir interfaces web (Libreria de Frontend) donde se utilizo HTML, Javascript y algo de CSS.
 
-### `npm start`
+    Los productos en venta se obtienen de una base de datos de Firebase y los datos de las compras realizados tambien
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Repositorio Git Hub [Click aqui](http://google.com)
+-----
+* Uso e intalacion:
+    
+    Se debe contar con un editor de codigo como Visual Studio Code, ( [Link Descarga](https://code.visualstudio.com/) ) que nos permita editar HTML y CSS.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    Instalar node.js que nos permite ejecutar codigo Javascript en el PC. ( [Link Descarga](https://nodejs.org/es/) )
 
-### `npm test`
+    Crear una carpeta donde alojar el proyecto
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    Entrar a la carpeta , clickear la barra de navegacion borrar y escribir cmd, lo que abrira una consola de comandos
 
-### `npm run build`
+    Clonar el repositorio del proyecto mediante el siguiente comando:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+        git clone https://github.com/ aqui va link
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    Abrir la carpeta del proyecto con Visual Studio Code y abrir la consola de este mismo
+    
+    Ingresar el siguiente comando en la consola de Visual Studio Code para instalar los paquetes y librerias necesarias:
+        
+        npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    Una vez terminado de instalar ingresar el siguiente comando en la consola:
 
-### `npm run eject`
+        npm start
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+-----
+* Tecnologias usadas:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+       * react 18.2.0
+       * firebase 9.17.1
+       * react-router-dom 6.7.0
+       * react-toastify 9.1.1
+       * sweetalert2 11.7.2
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* App en funcionamiento subida a algo :
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+        http// algo

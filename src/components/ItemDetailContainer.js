@@ -1,38 +1,40 @@
+import { collection,doc , getDoc } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { db } from "../firebase";
 import ItemDetail from "./ItemDetail";
-import ItemList from "./ItemList";
 
 const ItemDetailContainer = () => {
     const[cargo , setCargo] = useState(false)
     const[productos, setProductos] = useState({})
 
-    const params = useParams()
-    const paramsId = params.id 
+    const {id} = useParams()
+    
 
     useEffect(()=>{
-        const pedido =  fetch('https://fakestoreapi.com/products/'+paramsId)
+        const productosCollection = collection(db,"productos")
+
+        const referencia = doc(productosCollection,id)
+        const pedido = getDoc(referencia)
 
         pedido.then((respuesta)=>{
+            const producto = respuesta.data()
 
-            const productos = respuesta.json()
-            return productos
-        })
-        .then((productos)=>{
-            console.log(productos)
-            setProductos(productos)
+
+            setProductos(producto)
             setCargo(true)
+            
         })
         .catch((error)=>{
-            console.log(error.json())
+            console.log(error)
         })
 
-    },[])
+    },[id])
 
     return (
         <div>
-            <p>El pedido a la base : {!cargo ? "Cargando..." : "Termino de cargar" }</p>
-            <ItemDetail producto={productos}/>
+            <p>{!cargo ? "Cargando..." : null }</p>
+            <ItemDetail id={id} producto={productos}/>
         </div>
     )
 }

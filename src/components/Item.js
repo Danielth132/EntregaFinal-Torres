@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
 const Item = ({producto}) => {
-    console.log(producto.category)
     return ( 
         <div>
-            <article key={producto.id}>
+            <article  key={producto.id} className="product-card">
                     <h3>{producto.title}</h3>
                     <img src={producto.image} alt={producto.title} />
                     <p>${producto.price}</p>

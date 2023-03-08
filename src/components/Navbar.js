@@ -1,18 +1,18 @@
-import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
+import CartWidget from "./CartWidget";
+//no olvidar los import para usar el contexto
 
-function Nav(props) {
-
+function Navbar(props) {
 	const {isHeader, textLinkFooter, hrefLinkFooter} = props
-
+	
 	if (isHeader) {
     	return (
       		<nav className="header__navbar">
-        		<Link className="header__link" to="/productos/ropadehombre">Ropa de hombre</Link>
-        		<Link className="header__link" to="/productos/ropademujer">Ropa de mujer</Link>
+        		<Link className="header__link" to="/productos/electronicos">Electronicos</Link>
+        		<Link className="header__link" to="/productos/ropa">Ropa</Link>
 				<Link className="header__link" to="/productos/joyeria">Joyeria</Link>
-				<Link className="header__link" to="/productos/electronicos">Electronicos</Link>
 				<CartWidget/>
+				
       		</nav>
     	);
   	} else {
@@ -24,4 +24,4 @@ function Nav(props) {
   }
 }
 
-export default Nav;
+export default Navbar;

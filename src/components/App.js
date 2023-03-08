@@ -1,15 +1,21 @@
 import { BrowserRouter } from 'react-router-dom';
-import Header from './Header';
+import CustomProvider from './CustomProvider';
 import Footer from './Footer';
+import Header from './Header';
 import Main from './Main';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-function App() {
+const App = () => {
   return (
-    <BrowserRouter>
-      <Header titulo="One Appstore"/>
-      <Main/>
-      <Footer/>
-    </BrowserRouter>
+    <CustomProvider>
+      <BrowserRouter>
+        <Header titulo="One Appstore"/>
+        <Main/>
+        <Footer/>
+      </BrowserRouter>
+      <ToastContainer/>
+    </CustomProvider>
   )
     
 }

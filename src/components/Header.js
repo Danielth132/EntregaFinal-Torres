@@ -9,7 +9,9 @@ const Header = (props) => {
             <Link to="/" >
                 <h1 className="header_title">{props.titulo}</h1>
             </Link>
-            <Navbar isHeader={isHeader}/>
+            <Navbar 
+                isHeader={isHeader}
+            />
         </header>
 
     </>

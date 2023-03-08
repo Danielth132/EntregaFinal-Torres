@@ -1,38 +1,66 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
+import { db } from "../firebase";
+import { collection, getDocs, query , where } from "firebase/firestore"
+
 
 function ItemListContainer(props) {
     const[cargo , setCargo] = useState(false)
     const[productos, setProductos] = useState([])
 
-    const props1 = useParams()
-    console.log(props1)
+    const props1 = useParams()  
+    const categoria = props1.categoria
+
+    
+    
     
     useEffect(()=>{
-        const pedido =  fetch('https://fakestoreapi.com/products')
+        
+        const productosCollection = collection(db,"productos")
+        
+        if (categoria) {
+            const filtro = query(productosCollection,where("category","==",categoria))
+            const pedidoFirestore = getDocs(filtro)
 
-        pedido.then((respuesta)=>{
+            pedidoFirestore
+            .then((respuesta)=>{
+                
+                const productos = respuesta.docs.map(doc => ({ ...doc.data(), id: doc.id }) )
 
-            const productos = respuesta.json()
-            return productos
-        })
-        .then((productos)=>{
-            console.log(productos)
-            setProductos(productos)
-            setCargo(true)
-        })
-        .catch((error)=>{
-            console.log(error.json())
-        })
+                setProductos(productos)
+                setCargo(true)
 
-    },[])
+            })
+            .catch((error)=>{
+                console.log(error)
+            })
+
+        } else {
+            const filtro = query(productosCollection)
+            const pedidoFirestore = getDocs(filtro)
+
+            pedidoFirestore
+            .then((respuesta)=>{
+                
+                const productos = respuesta.docs.map(doc => ({ ...doc.data(), id: doc.id }) )
+
+                setProductos(productos)
+                setCargo(true)
+
+            })
+            .catch((error)=>{
+                console.log(error)
+            })
+        }
+
+    },[categoria])
 
     return ( 
-        <div>
-            <p>El pedido a la base : {!cargo ? "Cargando..." : "Termino de cargar" }</p>
+        <>
+            <p>{!cargo ? "Cargando..." : null }</p>
             <ItemList productos={productos}/>
-        </div>
+        </>
      );
 }
 

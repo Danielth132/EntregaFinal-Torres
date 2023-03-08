@@ -15,20 +15,26 @@ html , body , #root {
 }
 a{
   text-decoration: none;
-  color: white;
+  color: black;
 }
 header{
   background-color: rgb(169, 44, 207);
-  color: #fff;
   padding: 1rem 0.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 2px 6px rgb(0, 0, 0, 0.2);
 }
-header > nav > a {
+header a {
+  color: white;
+}
+
+.header__link{
   margin-left: 1rem;
   margin-right: 1rem;
+}
+.num__cart {
+  margin-left: 0
 }
 main{
   flex-grow: 1;
@@ -40,7 +46,20 @@ main a{
 }
 main img{
   max-width: 200px;
+  max-height: 200px;
+  
 }
+.boton_count{
+  
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  width: 70px;
+  height: 50px;
+  color: white;
+  background-color: rgb(169, 44, 207);
+}
+
 footer{
   background-color: rgb(169, 44, 207);
   color: #fff;
@@ -50,4 +69,36 @@ footer{
 }
 footer > nav > a {
   margin-right: 1rem;
+  color: blue;
+}
+.product-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  flex: 1 0 300px;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.cart__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 50%;
+}
+.cart__form > button {
+  margin: 1rem;
+  color: #fff;
+  
+  border: 3px solid rgb(169, 44, 207);
+  background-color: rgb(169, 44, 207);
 }
