@@ -8,7 +8,7 @@
 
     Los productos en venta se obtienen de una base de datos de Firebase y los datos de las compras realizados tambien
 
-* Repositorio Git Hub [Click aqui](http://google.com)
+* Repositorio Git Hub [Click aqui](https://github.com/Danielth132/EntregaFinal-Torres/tree/master)
 -----
 * Uso e intalacion:
     
@@ -22,7 +22,7 @@
 
     Clonar el repositorio del proyecto mediante el siguiente comando:
 
-        git clone https://github.com/ aqui va link
+        git clone https://github.com/Danielth132/EntregaFinal-Torres.git
 
     Abrir la carpeta del proyecto con Visual Studio Code y abrir la consola de este mismo
     
